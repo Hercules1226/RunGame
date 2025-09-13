@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LifeManager : MonoBehaviour
+{
+    public GameObject[] heart;
+
+    public void UpdateHeart(int life)
+    {
+        for(int i = 0; i < heart.Length; i++)
+        {
+            if(i < life)
+            {
+                heart[i].SetActive(true);
+            }
+            else
+            {
+                heart[i].SetActive(false);
+            }
+        }
+    }
+}
